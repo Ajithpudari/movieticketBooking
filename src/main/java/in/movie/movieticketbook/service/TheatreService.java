@@ -10,7 +10,7 @@ public interface TheatreService {
     public Theatre addTheatre(Theatre theatre);
     public List<Theatre> theatreList();
     public  Theatre theatreById(int theatreId) throws ResourceNotFoundException;
-    public String deleteMovie(Integer movieId);
-
+    public String deleteTheatre(Integer theatreId);
+    Theatre updateTheatre (Theatre theatre,int theatreId);
 
 }

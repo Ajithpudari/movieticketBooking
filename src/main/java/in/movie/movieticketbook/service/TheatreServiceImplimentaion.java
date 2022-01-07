@@ -1,5 +1,6 @@
 package in.movie.movieticketbook.service;
 
+import in.movie.movieticketbook.entity.Movie;
 import in.movie.movieticketbook.entity.Theatre;
 import in.movie.movieticketbook.exception.ResourceNotFoundException;
 import in.movie.movieticketbook.repository.ITheatreRepository;
@@ -35,13 +36,28 @@ public class TheatreServiceImplimentaion implements TheatreService {
             throw new ResourceNotFoundException("Theatre", "theatreById", theatreId);
         }
     }
+
+
+
     //delete
     @Override
-    public String deleteMovie(Integer theatreId) {
+    public String deleteTheatre(Integer theatreId) {
         theatreRepo.deleteById(theatreId);
         return "deleted";
     }
-    //update
-  //  public Theatre updateThatre(theatre)
+
+    @Override
+    public Theatre updateTheatre(Theatre theatre, int theatreId) {
+        Optional<Theatre> ExistTheatre = theatreRepo.findById(theatreId);
+        if(ExistTheatre.isPresent()) {
+            return ExistTheatre.get();
+        } else {
+            //throw new ResourceNotFoundException("Theatre", "Id", existMovie);
+            return ExistTheatre.get();
+
+        }
+
+    }
+
 
 }

@@ -39,13 +39,13 @@ public class MovieController {
 
 
 
-    
+
     //update movie
    //<!--- @PutMapping("/update1")
    // public ResponseEntity<Movie> updatemovie(@RequestBody Movie movie){
        // for (int i=0; i< list().size();i++){
-         //   Movie m= list().get(i);
-         //   if (m.movieid().equals(id)){
+         //   Movie m= list.get(i);
+         //   if (m.movie.equals(id)){
          //       movieService.set(id,movie);
          //       return;
         //    }
